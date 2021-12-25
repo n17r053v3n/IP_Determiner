@@ -52,7 +52,9 @@ def binCompare(binLeft, binRight):
         res.append(tmp)
     return res
 def binCount(binList, binNum):
-    return binarPieceConvert(bin(int(allPieces(binList), base=(2)) + int(binNum, base=(2)))[2:])
+    res = bin(int(allPieces(binList), base=(2)) + int(binNum, base=(2)))[2:]
+    res = "0"*(32-len(res)) + res
+    return binarPieceConvert(res)
 def allPieces(binList):
     listNum = ''
     for i in binList:
@@ -111,7 +113,7 @@ while(True):
         ipAdd = str(input("Enter ip address:\n"))
         ipDeterminer(ipAdd)
     elif answer == 2:
-        startIp = input("enter start IP")
+        startIp = input("enter start IP\n")
         lst = []
         dct = {}
         reverseDct = {}
@@ -168,4 +170,3 @@ while(True):
             startIp = ipDeterminer(ipAdd)
     else:
         print("error")
-        

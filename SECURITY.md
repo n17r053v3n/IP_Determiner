@@ -12,4 +12,4 @@
 
 If you seek a vulnerablility please comment in the codes comment section
 
-Updates come weekly!
+Update will mostly come in a week
